@@ -13,10 +13,13 @@ public class EntryPoint {
         PersonagemPlayer player = new PersonagemPlayer(grng,"assembly",4250.00);
         NPC npc = new NPC(grng,"ulterir","venda de armaduras",player);
 
+        //iteração com os estados
         AcaoesPersonagemImpl impl = new AcaoesPersonagemImpl();
         System.out.println(impl.statusPersonagem(player));
         impl.iteracaoComNpc(npc);
         npc.setIteracoes("arma de duas maos");
+        impl.iteracaoComNpc(npc);
+        npc.setIteracoes("comprar equipamento");
         impl.iteracaoComNpc(npc);
 
     }

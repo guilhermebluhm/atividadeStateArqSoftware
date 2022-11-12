@@ -15,6 +15,8 @@ public class Negociando extends State{
 
     @Override
     public void alterarEstado() {
-        //TODO
+        if(this.npc.getIteracoes().stream().anyMatch(x -> x.contains("comprar"))){
+            this.npc.setEstadoNPC(new Despedida(npc));
+        }
     }
 }
